@@ -1,7 +1,7 @@
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
-import Banner from "./components/Banner";
+import Contact from "./components/Contact";
 import Header from "./components/Header";
 import Navigation from "./components/Navigation";
 import Portfolio from "./components/Portfolio";
@@ -14,10 +14,10 @@ function App() {
   return (
     <div>
       <Header />
-      <Navigation />
-      <Banner />
       <Profile />
+      <Navigation />
       <Portfolio />
+      <Contact />
     </div>
   );
 }
