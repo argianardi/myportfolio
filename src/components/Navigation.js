@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "react-scroll/modules/components/Link";
 import { BiUser, BiCodeAlt, BiPhoneCall } from "react-icons/bi";
-import { FaTools } from "react-icons/fa";
+import { FaCogs } from "react-icons/fa";
 
 const Navigation = () => {
   return (
@@ -15,7 +15,7 @@ const Navigation = () => {
           smooth={true}
           spy={true}
         >
-          <BiUser />
+          <BiUser size={25} />
         </Link>
         <Link
           to="skills"
@@ -25,7 +25,7 @@ const Navigation = () => {
           smooth={true}
           spy={true}
         >
-          <FaTools />
+          <FaCogs size={25} />
         </Link>
         <Link
           to="portfolio"
@@ -35,7 +35,7 @@ const Navigation = () => {
           smooth={true}
           spy={true}
         >
-          <BiCodeAlt />
+          <BiCodeAlt size={25} />
         </Link>
         <Link
           to="contact"
@@ -45,7 +45,7 @@ const Navigation = () => {
           smooth={true}
           spy={true}
         >
-          <BiPhoneCall />
+          <BiPhoneCall size={25} />
         </Link>
       </div>
     </div>
