@@ -2,6 +2,7 @@ import getMoviesImage from "../images/getMoviesImage.png";
 import jitaProfileImage from "../images/jitaProfileImage.png";
 import getPokemonsImage from "../images/getPokemonsImage.png";
 import immersiveDashboardImage from "../images/immersiveDashboardImage.png";
+import todoListAppImage from "../images/todoListApp.png";
 
 export const data = [
   {
@@ -32,5 +33,12 @@ export const data = [
     image: immersiveDashboardImage,
     sourceCode: "https://github.com/argianardi/Immersive-Dashboard",
     demo: "https://immersive-dashboard-ten.vercel.app/",
+  },
+  {
+    id: 5,
+    name: "Todo List App",
+    image: todoListAppImage,
+    sourceCode: "https://github.com/ALTA-FE07-ArgianArdiPrasetya/todo-list-app",
+    demo: "https://todo-list-app-altafe7.vercel.app/",
   },
 ];
