@@ -41,4 +41,11 @@ export const data = [
     sourceCode: "https://github.com/ALTA-FE07-ArgianArdiPrasetya/todo-list-app",
     demo: "https://todo-list-app-altafe7.vercel.app/",
   },
+  {
+    id: 6,
+    name: "Payment Receipt",
+    image: null,
+    sourceCode: "https://github.com/argianardi/paymentReceipt",
+    demo: null,
+  },
 ];

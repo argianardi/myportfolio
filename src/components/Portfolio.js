@@ -39,32 +39,32 @@ const Portfolio = () => {
             {projects.map((item, index) => (
               <div
                 key={index}
-                // style={{ backgroundImage: `url(${item.image})` }}
                 className="shadow-lg shadow-[#040c16] container rounded-md 
-               text-center  mx-auto h-80"
+               text-center  mx-auto h-80 flex flex-col justify-center items-center"
               >
-                <img
-                  src={item.image}
-                  alt="item.name"
-                  className="mx-auto border-2 rounded-md border-b-fourth h-60"
-                />
-                {/* Hover effect for images */}
-                <span className="text-2xl font-bold tracking-wider text-gray-700">
+                {item.image && (
+                  <img
+                    src={item.image}
+                    alt={item.name}
+                    className="mx-auto border-2 rounded-md border-b-fourth h-60"
+                  />
+                )}
+                <span className="text-xl font-bold tracking-wider text-gray-700 text-gradient lg:text-2xl">
                   {item.name}
                 </span>
-                <div className="text-center ">
-                  {/* eslint-disable-next-line */}
+                <div className="text-center">
                   <a href={item.sourceCode} target="_blank">
-                    <button className="px-4 m-2 text-lg font-bold text-center text-gray-700 rounded-sm hover:bg-slate-200">
+                    <button className="px-4 m-2 text-lg font-bold text-center text-gray-700 rounded-sm hover:bg-slate-200 text-gradient">
                       Code
                     </button>
                   </a>
-                  {/* eslint-disable-next-line */}
-                  <a href={item.demo} target="_blank">
-                    <button className="px-4 m-2 text-lg font-bold text-center text-gray-700 rounded-sm hover:bg-slate-200">
-                      Demo
-                    </button>
-                  </a>
+                  {item.demo && (
+                    <a href={item.demo} target="_blank">
+                      <button className="px-4 m-2 text-lg font-bold text-center text-gray-700 rounded-sm hover:bg-slate-200 text-gradient">
+                        Demo
+                      </button>
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
