@@ -43,7 +43,7 @@ const Portfolio = () => {
                 <img
                   src={item.image}
                   alt="item.name"
-                  className="border-2 rounded-md border-b-fourth"
+                  className="mx-auto border-2 rounded-md border-b-fourth h-60"
                 />
                 {/* Hover effect for images */}
                 <span className="text-2xl font-bold tracking-wider text-gray-700">
