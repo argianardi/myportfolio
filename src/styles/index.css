@@ -11,7 +11,7 @@
 }
 
 .text-gradient {
-  @apply bg-gradient-to-r text-transparent bg-clip-text from-[#ff014f] to-[#011eff] font-bold;
+  @apply bg-gradient-to-r text-transparent bg-clip-text from-[#ff014f] to-[#011eff];
 }
 
 .bg-gradient {
@@ -24,7 +24,7 @@
   );
 }
 .section {
-  @apply py-8 lg:py-24 lg:h-screen flex items-center;
+  @apply flex items-center py-8 lg:py-24 lg:h-screen;
 }
 
 .bb {
