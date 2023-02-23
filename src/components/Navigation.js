@@ -8,6 +8,7 @@ import {
   BiPhoneCall,
 } from "react-icons/bi";
 
+import { RiStackFill, RiStackLine } from "react-icons/ri";
 const Navigation = () => {
   return (
     <div className="fixed bottom-4 left-0 right-0 text-center z-10 lg:translate-y-[-50%] lg:top-[50%] lg:left-auto lg:right-5">
@@ -21,6 +22,16 @@ const Navigation = () => {
           spy={true}
         >
           <BiUser />
+        </Link>
+        <Link
+          to="skills"
+          className="flex w-[50px] h-[50px] justify-center items-center cursor-pointer"
+          activeClass="active"
+          offset={-10}
+          smooth={true}
+          spy={true}
+        >
+          <RiStackLine />
         </Link>
         <Link
           to="portfolio"
