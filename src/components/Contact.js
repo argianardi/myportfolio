@@ -4,8 +4,8 @@ import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 const Contact = () => {
   return (
     <div id="contact">
-      <div className="mb-10 container mx-auto max-w-[1200px] px-3 py-12  sm:pb-10 lg:pb-20 lg:pt-11 lg:text-left">
-        <h4 className="mb-5 text-gradient font-secondary text-[24px] text-center lg:text-left">
+      <div className="mb-10 container mx-auto max-w-[1200px] px-3 py-0 sm:py-12 pb-0 sm:pb-10 lg:pb-5 lg:pt-11 lg:text-left">
+        <h4 className="mb-2 sm:mb-5 text-gradient font-secondary text-[24px] text-center lg:text-left">
           Contact Me
         </h4>
         <div className="mx-auto text-gradient font-primary">
@@ -17,7 +17,7 @@ const Contact = () => {
             from you. Reach me on the link down below.
           </p>
         </div>
-        <div className="flex flex-col max-w-xs mx-auto mt-20 gap-7 md:justify-center">
+        <div className="flex flex-col max-w-xs gap-4 mx-auto mt-3 sm:mt-20 sm:gap-7 md:justify-center">
           <a
             href="https://wa.me/6285768424797"
             target="_blank"
