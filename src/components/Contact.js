@@ -4,14 +4,20 @@ import { FaWhatsapp, FaEnvelope, FaLinkedin, FaGithub } from "react-icons/fa";
 const Contact = () => {
   return (
     <div id="contact">
-      <div className="container mx-auto max-w-[1200px] px-3 pt-3 pb-3 sm:pb-10 lg:pb-20 lg:pt-11 text-center lg:text-left">
-        <h4 className="text-gradient font-secondary text-[24px] ">
+      <div className="mb-10 container mx-auto max-w-[1200px] px-3 py-12  sm:pb-10 lg:pb-20 lg:pt-11 lg:text-left">
+        <h4 className="mb-5 text-gradient font-secondary text-[24px] text-center lg:text-left">
           Contact Me
         </h4>
-        <p className="text-gradient font-primary">
-          Have a new opportunity? Please reach me on the link down below.
-        </p>
-        <div className="flex flex-col max-w-sm gap-4 mx-auto mt-20 md:justify-center">
+        <div className="mx-auto text-gradient font-primary">
+          <p>
+            Thank you for visiting my portfolio! If you have any inquiries or
+            just want to say hello, feel free to get in touch with me through
+            the contact information below. I am always eager to collaborate on
+            exciting new projects and expand my network, so I would love to hear
+            from you. Reach me on the link down below.
+          </p>
+        </div>
+        <div className="flex flex-col max-w-xs mx-auto mt-20 gap-7 md:justify-center">
           <a
             href="https://wa.me/6285768424797"
             target="_blank"
@@ -40,7 +46,7 @@ const Contact = () => {
             View my LinkedIn profile
           </a>
           <a
-            href="https://www.linkedin.com/in/argianardiprasetya"
+            href="https://github.com/argianardi"
             target="_blank"
             rel="noopener noreferrer"
             className="flex items-center justify-center px-4 py-2 text-lg font-bold text-white bg-gray-800 rounded-full hover:bg-gray-900"
