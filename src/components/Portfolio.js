@@ -8,8 +8,11 @@ const Portfolio = () => {
       <div id="portfolio">
         <div className="container mx-auto max-w-[1200px] px-3 pt-3 pb-20">
           <div className="flex flex-col lg:flex-row justify-between mb-[50px]">
+            <h4 className="text-gradient font-secondary text-[24px] block text-center lg:hidden">
+              My Latest Projects
+            </h4>
             <div className="order-2 mt-5 lg:order-1">
-              <h4 className="text-gradient font-secondary text-[24px]">
+              <h4 className="text-gradient font-secondary text-[24px] hidden lg:block">
                 My Latest Projects
               </h4>
               <div className="text-gradient font-primary max-w-[700px] mx-auto text-sm">

@@ -36,7 +36,7 @@ const Navigation = () => {
           to="contact"
           className="flex w-[50px] h-[50px] justify-center items-center cursor-pointer"
           activeClass="active"
-          offset={0}
+          offset={-10}
           smooth={true}
           spy={true}
         >
