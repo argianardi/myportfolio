@@ -13,6 +13,10 @@ module.exports = {
         third: "#FEF6C7",
         fourth: "#011eff",
       },
+      screens: {
+        xs: "350px",
+        xxs: "450px",
+      },
     },
   },
   plugins: [],
