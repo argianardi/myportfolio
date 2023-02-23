@@ -52,10 +52,10 @@ const Profile = () => {
             <a
               href="https://drive.google.com/file/d/17xF-nIP3lqczkDvgQa35P_GUPe0HtxM5/view?usp=share_link"
               target="_blank"
-              className="flex w-56 p-1 mt-3 text-blue-900 hover:bg-slate-200"
+              className="flex w-48 p-1 mt-3 text-blue-900 rounded-sm hover:bg-slate-200 bg-gradient hover:text-white"
             >
               <ImDownload size={25} />
-              <p className="ml-1 font-bold font-primary">My Curriculum Vitae</p>
+              <p className="ml-1 font-bold font-primary">Download My CV</p>
             </a>
           </div>
         </div>
