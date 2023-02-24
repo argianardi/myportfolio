@@ -43,6 +43,13 @@ export const data = [
   },
   {
     id: 6,
+    name: "Marketin",
+    image: null,
+    sourceCode: "https://github.com/argianardi/marketin",
+    demo: "https://marketin.vercel.app/",
+  },
+  {
+    id: 7,
     name: "Payment Receipt",
     image: null,
     sourceCode: "https://github.com/argianardi/paymentReceipt",
