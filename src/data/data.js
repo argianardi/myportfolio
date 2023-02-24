@@ -3,6 +3,7 @@ import jitaProfileImage from "../images/jitaProfileImage.png";
 import getPokemonsImage from "../images/getPokemonsImage.png";
 import immersiveDashboardImage from "../images/immersiveDashboardImage.png";
 import todoListAppImage from "../images/todoListApp.png";
+import marketinImage from "../images/marketinImage.png";
 
 export const data = [
   {
@@ -44,7 +45,7 @@ export const data = [
   {
     id: 6,
     name: "Marketin",
-    image: null,
+    image: marketinImage,
     sourceCode: "https://github.com/argianardi/marketin",
     demo: "https://marketin.vercel.app/",
   },
