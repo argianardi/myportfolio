@@ -3,7 +3,7 @@ import { data } from "../data/data";
 
 const Portfolio = () => {
   const projects = data;
-  console.log(data);
+  console.log("data", data);
   return (
     <>
       <div id="portfolio">
