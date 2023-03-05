@@ -1,5 +1,6 @@
 import React from "react";
 import { data } from "../data/data";
+import { BsGithub, BsGlobe } from "react-icons/bs";
 
 const Portfolio = () => {
   const projects = data;
@@ -53,16 +54,18 @@ const Portfolio = () => {
                 <span className="text-xl font-bold tracking-wider text-gray-700 text-gradient lg:text-2xl">
                   {item.name}
                 </span>
-                <div className="text-center">
+                <div className="flex gap-2">
                   <a href={item.sourceCode} target="_blank">
-                    <button className="px-4 m-2 text-lg font-bold text-center text-gray-700 rounded-sm hover:bg-slate-200 text-gradient">
-                      Code
+                    <button className="flex items-center justify-center gap-1 px-2 duration-500 rounded-sm bg-slate-200 hover:bg-slate-300">
+                      <BsGithub className="text-blue-800" />
+                      <p className="text-gradient">Code</p>
                     </button>
                   </a>
                   {item.demo && (
                     <a href={item.demo} target="_blank">
-                      <button className="px-4 m-2 text-lg font-bold text-center text-gray-700 rounded-sm hover:bg-slate-200 text-gradient">
-                        Demo
+                      <button className="flex items-center justify-center gap-1 px-2 duration-500 rounded-sm bg-slate-200 hover:bg-slate-300">
+                        <BsGlobe className="text-blue-800" />
+                        <p className="text-gradient">Demo</p>
                       </button>
                     </a>
                   )}
