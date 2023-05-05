@@ -55,7 +55,7 @@ const Skills = () => {
     {
       name: "ExpressJS",
       icon: SiExpress,
-      repoDoc: "https://github.com/argianardi/SinauExpressJS",
+      repoDoc: "https://github.com/argianardi/user-role/tree/auth",
     },
     {
       name: "Sequelize",
