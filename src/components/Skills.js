@@ -93,7 +93,12 @@ const Skills = () => {
 
         <div className="grid grid-cols-2 mt-5 xs:grid-cols-3 xxs:grid-cols-4 gap-y-8 sm:grid-cols-6 md:grid-cols-7 lg:grid-cols-9 xl:grid-cols-10 lg:mt-10">
           {skills.map((skill) => (
-            <a href={skill.repoDoc} key={skill.name} target="_blank">
+            <a
+              href={skill.repoDoc}
+              key={skill.name}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <div className="hover:bg-slate-200 w-24 shadow-lg shadow-[#040c16]   mx-auto rounded-md">
                 <span className="flex items-center justify-center w-12 h-12 mx-auto border-2 rounded-md border-primary">
                   <skill.icon
