@@ -3,7 +3,7 @@ import jitaProfileImage from "../images/jitaProfileImage.png";
 import getPokemonsImage from "../images/getPokemonsImage.png";
 import immersiveDashboardImage from "../images/immersiveDashboardImage.png";
 import taskifyImage from "../images/taskifyImage.png";
-import marketinImage from "../images/marketinImage.png";
+import betamartImage from "../images/betamart.png";
 
 export const data = [
   {
@@ -44,10 +44,10 @@ export const data = [
   },
   {
     id: 6,
-    name: "Marketin",
-    image: marketinImage,
-    sourceCode: "https://github.com/argianardi/marketin",
-    demo: "https://marketin.vercel.app/",
+    name: "Betamart",
+    image: betamartImage,
+    sourceCode: "https://github.com/argianardi/betaMart",
+    demo: "https://betamart.vercel.app/",
   },
   {
     id: 7,
