@@ -1,6 +1,6 @@
-import React from "react";
-import { TypeAnimation } from "react-type-animation";
-import { ImDownload } from "react-icons/im";
+import React from 'react';
+import { TypeAnimation } from 'react-type-animation';
+import { ImDownload } from 'react-icons/im';
 
 const Profile = () => {
   return (
@@ -12,7 +12,7 @@ const Profile = () => {
         <div className="w-full">
           <img
             src="/images/profilePicture.jpg"
-            alt="profile picture"
+            alt="profile "
             className="mx-auto rounded-full"
           />
           <div className="block text-center font-secondary font-black text-xl lg:text-[30px]">
@@ -20,9 +20,13 @@ const Profile = () => {
             <div className="mt-0 lg:mt-3">
               <TypeAnimation
                 sequence={[
-                  "Argian Ardi Prasetya",
+                  'Argian Ardi Prasetya',
                   3000,
-                  "Frontend Developer",
+                  'Frontend Developer',
+                  3000,
+                  'Backend Developer',
+                  3000,
+                  'Fullstack Developer',
                   3000,
                 ]}
                 wrapper="span"
@@ -34,25 +38,24 @@ const Profile = () => {
           </div>
           <div className="px-0 mt-3 lg:px-24 ">
             <p className="text-sm font-primary text-gradient">
-              I am Frontend Developer with Mechanical Engineering Degree.
-              Graduates from Alterra Academy Intensive Program focus on
-              Front-End Web Development. Proficient with HTML, CSS, JavaScript
-              (ReactJS, NextJS, NodeJS, ExpressJS) and MYSQL. I have project
-              experiences use RESTful API like Immersive Dashboard for
-              management of student data and Online Store Web Application as a
-              Frontend Developer collaborating with a Backend Developer Team.
-            </p>
-            <p className="mt-3 text-sm font-primary text-gradient">
-              I also have personal projects using an API consumption Web App
-              named getMovies and getNews.Currently, I'm looking for Frontend
-              Developer position with a company where I can implement my ability
-              and grow up either my skills or personal growth as Frontend
-              Developer.
+              A Software Developer with over 1 year of experience in designing
+              and developing applications. Proficient in HTML, CSS, JavaScript,
+              TypeScript, and Node.js, as well as modern frontend frameworks
+              like Bootstrap, Tailwind CSS, React JS, and Next JS, and backend
+              frameworks like Express JS. Experienced in building and
+              integrating RESTful APIs, creating applications from scratch, and
+              working with relational and non-relational databases like MySQL
+              and MongoDB. Able to collaborate effectively with other developers
+              and team members to deliver high-quality applications. Passionate
+              about learning new technologies and eager to contribute to dynamic
+              projects while continuing professional growth in a fast-paced
+              environment.
             </p>
             <a
-              href="https://drive.google.com/file/d/17xF-nIP3lqczkDvgQa35P_GUPe0HtxM5/view?usp=share_link"
+              href="https://drive.google.com/file/d/1rywqIL3epOaElZtRfjvSdHuW1CXhYoW2/view"
               target="_blank"
-              className="flex w-48 p-1 mt-3 text-blue-900 rounded-sm hover:bg-slate-200 bg-gradient hover:text-white"
+              rel="noreferrer"
+              className="flex w-48 px-2 py-1 mt-3 text-blue-900 rounded-sm hover:bg-slate-200 bg-gradient hover:text-white"
             >
               <ImDownload size={25} />
               <p className="ml-1 font-bold font-primary">Download My CV</p>
