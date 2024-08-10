@@ -1,10 +1,9 @@
-import React from "react";
-import { data } from "../data/data";
-import { BsGithub, BsGlobe } from "react-icons/bs";
+import React from 'react';
+import { data } from '../data/data';
+import { BsGithub, BsGlobe } from 'react-icons/bs';
 
 const Portfolio = () => {
   const projects = data;
-  console.log("data", data);
   return (
     <>
       <div id="portfolio">
@@ -48,21 +47,23 @@ const Portfolio = () => {
                   <img
                     src={item.image}
                     alt={item.name}
-                    className="mx-auto border-2 rounded-md border-b-fourth h-60"
+                    className="object-cover mx-auto border-2 rounded-md h-60"
                   />
                 )}
                 <span className="text-xl font-bold tracking-wider text-gray-700 text-gradient lg:text-2xl">
                   {item.name}
                 </span>
                 <div className="flex gap-2">
-                  <a href={item.sourceCode} target="_blank">
-                    <button className="flex items-center justify-center gap-1 px-2 duration-500 rounded-sm bg-slate-200 hover:bg-slate-300">
-                      <BsGithub className="text-blue-800" />
-                      <p className="text-gradient">Code</p>
-                    </button>
-                  </a>
+                  {item.sourceCode && (
+                    <a href={item.sourceCode} target="_blank" rel="noreferrer">
+                      <button className="flex items-center justify-center gap-1 px-2 duration-500 rounded-sm bg-slate-200 hover:bg-slate-300">
+                        <BsGithub className="text-blue-800" />
+                        <p className="text-gradient">Code</p>
+                      </button>
+                    </a>
+                  )}
                   {item.demo && (
-                    <a href={item.demo} target="_blank">
+                    <a href={item.demo} target="_blank" rel="noreferrer">
                       <button className="flex items-center justify-center gap-1 px-2 duration-500 rounded-sm bg-slate-200 hover:bg-slate-300">
                         <BsGlobe className="text-blue-800" />
                         <p className="text-gradient">Demo</p>
