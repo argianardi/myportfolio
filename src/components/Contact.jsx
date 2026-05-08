@@ -57,14 +57,14 @@ const Contact = () => {
           </a>
 
           {/* Social Links */}
-          <div className="flex items-center justify-center gap-6">
+          <div className="flex items-center justify-center gap-2">
             {contactLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 target="_blank"
                 rel="noreferrer"
-                className={`text-slate ${link.color} transition-all duration-300 hover:-translate-y-1`}
+                className={`text-slate p-2 ${link.color} transition-all duration-300 hover:-translate-y-1`}
                 aria-label={link.name}
               >
                 <link.icon size={22} />
