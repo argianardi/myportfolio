@@ -5,9 +5,9 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 md:py-32">
       <div className="container mx-auto max-w-6xl px-6">
-        <div data-aos="fade-up">
+        <div data-aos="fade-up" className="mb-12">
           <div className="flex items-center gap-4 mb-4">
-            <h2 className="section-heading whitespace-nowrap">
+            <h2 className="section-heading whitespace-nowrap mb-0">
               <span className="font-mono text-accent text-xl mr-2">03.</span>
               Projects
             </h2>
@@ -16,73 +16,47 @@ const Portfolio = () => {
           <p className="section-subheading">// things I&apos;ve built</p>
         </div>
 
-        {/* Featured Projects (with images) */}
-        <div className="space-y-20 mb-16">
-          {projects
-            .filter((p) => p.image)
-            .map((project, idx) => (
-              <div
-                key={project.name}
-                className={`relative grid md:grid-cols-12 gap-4 items-center ${
-                  idx % 2 === 0 ? '' : 'md:text-right'
-                }`}
-                data-aos="fade-up"
-              >
-                {/* Image */}
-                <div
-                  className={`md:col-span-7 ${idx % 2 === 0 ? 'md:col-start-1' : 'md:col-start-6'} row-start-1`}
-                >
-                  <a
-                    href={project.demo}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="block relative group"
-                  >
-                    <div className="absolute inset-0 bg-accent/20 group-hover:bg-transparent transition-all duration-300 rounded-lg z-10"></div>
-                    <img
-                      src={project.image}
-                      alt={project.name}
-                      className="rounded-lg w-full object-cover aspect-video"
-                    />
-                  </a>
-                </div>
+        {/* Unified Projects Grid */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {projects.map((project, idx) => (
+            <div
+              key={project.name}
+              className="glass-card !p-0 overflow-hidden group hover:-translate-y-2 hover:shadow-2xl hover:shadow-accent/10 transition-all duration-300 flex flex-col h-full border border-slate/10 hover:border-accent/30"
+              data-aos="fade-up"
+              data-aos-delay={(idx % 3) * 100}
+            >
+              {/* Image Container */}
+              <div className="relative h-48 overflow-hidden bg-slate-800">
+                <div className="absolute inset-0 bg-accent/20 group-hover:bg-transparent transition-colors duration-500 z-10"></div>
+                {project.image ? (
+                  <img
+                    src={project.image}
+                    alt={project.name}
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-in-out"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center group-hover:scale-110 transition-transform duration-700 ease-in-out bg-gradient-to-br from-slate-800 to-slate-900">
+                    <span className="text-6xl font-mono font-bold text-slate-700 group-hover:text-accent/40 transition-colors duration-500">
+                      {project.name.charAt(0).toUpperCase()}
+                    </span>
+                  </div>
+                )}
+              </div>
 
-                {/* Content */}
-                <div
-                  className={`md:col-span-6 ${idx % 2 === 0 ? 'md:col-start-7' : 'md:col-start-1'} row-start-1 relative z-20`}
-                >
-                  <p className="font-mono text-accent text-xs mb-2">
-                    Featured Project
-                  </p>
-                  <h3 className="text-xl md:text-2xl font-bold text-slate-light mb-4">
+              {/* Content Container */}
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex justify-between items-start mb-4 gap-4">
+                  <h3 className="text-xl font-bold text-slate-light group-hover:text-accent transition-colors duration-300 line-clamp-2">
                     {project.name}
                   </h3>
-                  <div className="glass-card !p-5 mb-4">
-                    <p className="text-slate text-sm leading-relaxed">
-                      {project.description}
-                    </p>
-                  </div>
-                  <div
-                    className={`flex flex-wrap mb-4 font-mono text-xs text-slate ${idx % 2 !== 0 ? 'md:justify-end' : ''}`}
-                  >
-                    {project.tech.map((tech, index) => (
-                      <>
-                        <span key={tech}>{tech}</span>
-                        {index < project?.tech?.length - 1 && (
-                          <span>,&nbsp;</span>
-                        )}
-                      </>
-                    ))}
-                  </div>
-                  <div
-                    className={`flex gap-4 ${idx % 2 !== 0 ? 'md:justify-end' : ''}`}
-                  >
+                  <div className="flex gap-3 text-slate flex-shrink-0 mt-1">
                     {project.sourceCode && (
                       <a
                         href={project.sourceCode}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-slate-light hover:text-accent transition-colors"
+                        className="hover:text-accent hover:scale-110 transition-all duration-200"
+                        title="Source Code"
                       >
                         <FiGithub size={20} />
                       </a>
@@ -92,93 +66,33 @@ const Portfolio = () => {
                         href={project.demo}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-slate-light hover:text-accent transition-colors"
+                        className="hover:text-accent hover:scale-110 transition-all duration-200"
+                        title="Live Demo"
                       >
                         <FiExternalLink size={20} />
                       </a>
                     )}
                   </div>
                 </div>
-              </div>
-            ))}
-        </div>
 
-        {/* Other Projects Grid */}
-        <h3
-          className="text-center font-bold text-xl text-slate-light mb-8"
-          data-aos="fade-up"
-        >
-          Other Noteworthy Projects
-        </h3>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {projects
-            .filter((p) => !p.image)
-            .map((project) => (
-              <div
-                key={project.name}
-                className="glass-card group hover:-translate-y-2 transition-all duration-300"
-                data-aos="fade-up"
-              >
-                {/* Card Header */}
-                <div className="flex items-center justify-between mb-6">
-                  <div className="text-accent text-3xl">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="40"
-                      height="40"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      stroke="currentColor"
-                      strokeWidth="1"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    >
-                      <path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path>
-                    </svg>
-                  </div>
-                  <div className="flex gap-3">
-                    {project.sourceCode && (
-                      <a
-                        href={project.sourceCode}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-slate hover:text-accent transition-colors"
-                      >
-                        <FiGithub size={18} />
-                      </a>
-                    )}
-                    {project.demo && (
-                      <a
-                        href={project.demo}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-slate hover:text-accent transition-colors"
-                      >
-                        <FiExternalLink size={18} />
-                      </a>
-                    )}
-                  </div>
-                </div>
-
-                {/* Card Body */}
-                <h4 className="text-lg font-bold text-slate-light mb-2 group-hover:text-accent transition-colors">
-                  {project.name}
-                </h4>
-                <p className="text-slate text-sm leading-relaxed mb-6">
+                <p className="text-slate text-sm leading-relaxed mb-6 flex-grow">
                   {project.description}
                 </p>
 
                 {/* Tech Tags */}
-                <div className="flex flex-wrap gap-2 mt-auto">
-                  {project.tech.map((tech, index) => (
-                    <div className="font-mono text-xs text-slate-dark">
-                      <span key={tech}>{tech}</span>
-                      {index < project?.tech?.length - 1 && <span>,</span>}
-                    </div>
+                <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-slate/10">
+                  {project.tech.map((tech) => (
+                    <span
+                      key={tech}
+                      className="font-mono text-[10px] sm:text-xs text-accent bg-accent/10 px-2.5 py-1 rounded-full"
+                    >
+                      {tech}
+                    </span>
                   ))}
                 </div>
               </div>
-            ))}
+            </div>
+          ))}
         </div>
       </div>
     </section>
