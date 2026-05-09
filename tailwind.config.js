@@ -1,23 +1,49 @@
 /** @type {import('tailwindcss').Config} */
-module.exports = {
-  content: ["./src/**/*.{js,jsx,ts,tsx}"],
+export default {
+  content: ["./index.html", "./src/**/*.{js,jsx}"],
   theme: {
-    fontFamily: {
-      primary: "Montserrat",
-      secondary: "Orbitron",
-    },
     extend: {
       colors: {
-        primary: "#B809C3",
-        secondary: "#ff014f",
-        third: "#FEF6C7",
-        fourth: "#011eff",
+        navy: {
+          900: '#0a192f',
+          800: '#112240',
+          700: '#1d3461',
+        },
+        slate: {
+          light: '#ccd6f6',
+          DEFAULT: '#8892b0',
+          dark: '#495670',
+        },
+        accent: {
+          DEFAULT: '#64ffda',
+          hover: '#8affea',
+          muted: 'rgba(100, 255, 218, 0.1)',
+        }
       },
-      screens: {
-        xs: "350px",
-        xxs: "450px",
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        mono: ['Fira Code', 'monospace'],
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.6s ease-out',
+        'slide-up': 'slideUp 0.6s ease-out',
+        'slide-down': 'slideDown 0.3s ease-out',
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
+        },
+        slideUp: {
+          '0%': { opacity: '0', transform: 'translateY(20px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        slideDown: {
+          '0%': { opacity: '0', transform: 'translateY(-10px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
       },
     },
   },
   plugins: [],
-};
+}
