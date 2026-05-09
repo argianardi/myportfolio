@@ -58,12 +58,6 @@ const Hero = () => {
             </a>
           </div>
         </div>
-
-        {/* Scroll indicator */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2">
-          <span className="font-mono text-slate text-xs">scroll down </span>
-          <div className="w-[1px] h-16 bg-gradient-to-b from-accent to-transparent"></div>
-        </div>
       </div>
     </section>
   );
