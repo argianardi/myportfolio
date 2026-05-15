@@ -8,7 +8,7 @@ const Portfolio = () => {
         <div data-aos="fade-up" className="mb-12">
           <div className="flex items-center gap-4 mb-4">
             <h2 className="section-heading whitespace-nowrap mb-0">
-              <span className="font-mono text-accent text-xl mr-2">03.</span>
+              <span className="font-mono text-accent text-xl mr-2">04.</span>
               Projects
             </h2>
             <div className="accent-line flex-grow max-w-[300px] hidden sm:block"></div>
