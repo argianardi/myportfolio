@@ -47,7 +47,7 @@ const Skills = () => {
         <div data-aos="fade-up">
           <div className="flex items-center gap-4 mb-4">
             <h2 className="section-heading whitespace-nowrap">
-              <span className="font-mono text-accent text-xl mr-2">02.</span>
+              <span className="font-mono text-accent text-xl mr-2">03.</span>
               Skills & Technologies
             </h2>
             <div className="accent-line flex-grow max-w-[300px] hidden sm:block"></div>
