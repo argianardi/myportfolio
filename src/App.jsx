@@ -3,6 +3,7 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Header from './components/Header.jsx';
 import Hero from './components/Hero.jsx';
+import Experience from './components/Experience.jsx';
 import Skills from './components/Skills.jsx';
 import Portfolio from './components/Portfolio.jsx';
 import Contact from './components/Contact.jsx';
@@ -23,6 +24,7 @@ function App() {
       <Header />
       <main>
         <Hero />
+        <Experience />
         <Skills />
         <Portfolio />
         <Contact />
